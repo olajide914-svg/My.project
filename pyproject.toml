@@ -1,0 +1,73 @@
+[project]
+name = "climatecli"
+version = "0.1.0"
+description = "Boilerplate code for a simple Python package."
+license = {file = "LICENSE"}
+authors = [
+    {name = "Florian Ladstädter", email = "florian.ladstaedter@uni-graz.at"}
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+dependencies = [
+    "numpy >= 1.24.2",
+    "pyyaml >= 6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff >= 0.3"
+]
+
+[project.scripts]
+pytemplate = "climatecli.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yml"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+select = [
+    # flake8-builtins
+    "A",
+    # flake8-bugbear
+    "B",
+    # mccabe
+    "C90",
+    # pydocstyle
+    "D",
+    # pycodestyle error
+    "E",
+    # Pyflakes
+    "F",
+    # isort
+    "I",
+    # pep8-naming
+    "N",
+    # flake8-simplify
+    "SIM",
+    # flake8-print
+    "T20",
+    # pyupgrade
+    "UP",
+    # pycodestyle warning
+    "W"
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/climatecli/__init__.py
+src/climatecli/cli.py
+src/climatecli/core.py
+src/climatecli/example.py
+src/climatecli/plots.py
+src/climatecli/utils.py
+src/climatecli.egg-info/PKG-INFO
+src/climatecli.egg-info/SOURCES.txt
+src/climatecli.egg-info/dependency_links.txt
+src/climatecli.egg-info/entry_points.txt
+src/climatecli.egg-info/requires.txt
+src/climatecli.egg-info/top_level.txt
+src/climatecli/data/some_data.yml

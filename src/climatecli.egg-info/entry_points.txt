@@ -1,0 +1,2 @@
+[console_scripts]
+pytemplate = climatecli.cli:main
